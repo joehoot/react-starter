@@ -22,3 +22,14 @@ test("renders page 2 at /page-2", () => {
   );
   expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Page 2");
 });
+
+test("renders 404 for unknown route", () => {
+  render(
+    <MemoryRouter initialEntries={["/unknown"]}>
+      <App />
+    </MemoryRouter>,
+  );
+  expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(
+    "404 — Page not found",
+  );
+});
