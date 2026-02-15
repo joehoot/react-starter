@@ -1,3 +1,12 @@
+:root {
+  --font-family: "Inter Variable", sans-serif;
+  --font-size: 0.75rem;
+  --line-height: 1.5;
+  --color: #213547;
+  --background-color: #ffffff;
+  color-scheme: light dark;
+}
+
 *,
 *::before,
 *::after {
@@ -10,7 +19,11 @@
 
 body {
   min-height: 100svh;
-  line-height: 1.5;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--color);
+  background-color: var(--background-color);
   -webkit-font-smoothing: antialiased;
 }
 
